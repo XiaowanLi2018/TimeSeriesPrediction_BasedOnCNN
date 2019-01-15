@@ -1,4 +1,4 @@
-# TimeSeriesPrediction_BasedOnCNN
+# TSPrediction_BasedOnCNN
 Base Model:
 --
      Wavenet
