@@ -20,7 +20,7 @@
 <br>
 2.扩张卷积：<br>
 扩展卷积是在普通卷机的基础上引入一个新的 hyper-parameter, dilate（扩张系数）, 这个 hyper-parameter 的涵义是每隔 dilate-1 个像素取一个” 像素”, 做卷积操作，扩张卷积可以做到每一层隐层都和输入序列大小一样，并且计算量降低，感受野足够大
-![]https://github.com/XiaowanLi2018/TimeSeriesPrediction_BasedOnCNN/blob/master/data/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-01-21%20%E4%B8%8A%E5%8D%8810.10.31.png
+
 算法设计：
 --
 <br>
