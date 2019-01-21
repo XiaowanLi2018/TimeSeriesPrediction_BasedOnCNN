@@ -61,12 +61,41 @@
 --
 随机选择验证集中的2000条时间序列测试结果，其mae基本在0.05-0.11之间：<br>
 ![](https://github.com/XiaowanLi2018/TimeSeriesPrediction_BasedOnCNN/blob/master/data/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-01-21%20%E4%B8%8B%E5%8D%882.31.52.png)<br>
-随机统计了mape其中1000条时间序列的单点的mape基本在5%-11%范围内，其中一次的具体结果样例:<br>
+随机统计了mape其中1000条时间序列的单点的mape，其中一次的具体结果样例:<br>
 ![](https://github.com/XiaowanLi2018/TimeSeriesPrediction_BasedOnCNN/blob/master/data/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-01-21%20%E4%B8%8B%E5%8D%882.33.19.png)
 
 使用方法以及说明：
 --
 **模型参数**
 
+| hyper_parameter                  | description                 |
+| -------------------------------- | :-------------------------- |
+| n_filters                        | 卷积核的个数                  |
+| filter_width                     | 卷积核的大小                  |
+| dilation_rates                   | 扩张系数范围                  |
+| padding                          | 卷积填充类型                  |
+| dropout_rate                     | dropout系数                  |
+| activation                       | 激活类型                     |
+| use_skip_connections             | 是否用残差跳层                |
+| return_sequence                  | 是否需要预测序列              |
+| PRED_LENGTH                      | 预测序列的长度                |
+
 **具体脚本功用**
 
+1. 数据预处理
+trainer.py 数据读入以及数据集划分
+util.py 基本数据处理
+2. 训练
+train.py
+运行：python3 train.py
+3. 预测
+predict.py
+运行： python3 predict.py
+4. 模型
+my_models.py
+
+参考文献：
+--
+1.[CNN时序预测基础论文](https://arxiv.org/pdf/1803.01271.pdf）
+2.[Wavenet](https://github.com/ZhouYuxuanYX/Wavenet-in-Keras-for-Kaggle-Competition-Web-Traffic-Time-Series-Forecasting)
+3.[TCN](https://github.com/philipperemy/keras-tcn)
