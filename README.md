@@ -20,8 +20,10 @@
 2.扩张卷积：<br>
 扩展卷积是在普通卷机的基础上引入一个新的 hyper-parameter, dilate（扩张系数）, 这个 hyper-parameter 的涵义是每隔 dilate-1 个像素取一个” 像素”, 做卷积操作，扩张卷积可以做到每一层隐层都和输入序列大小一样，并且计算量降低，感受野足够大<br>
 ![](https://github.com/XiaowanLi2018/TimeSeriesPrediction_BasedOnCNN/blob/master/data/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-01-21%20%E4%B8%8A%E5%8D%8810.10.31.png)
+<br>
+
 算法设计：
---
+-
 <br>
 1.整体来说经过多次尝试，对于wavenet这个网络来说一定程度的增大感受野会对提升准确率有一定帮助，但是wavenet整体网络区域训练过程中过拟合的情况，这里有几个可以显著提高准确率的设计：<br>
 （1）保持teaching force不变，seq2seq中加入前一个时间切片的数据和原始的encode数据拼接起来作为输入会极大的提高准确率<br>
