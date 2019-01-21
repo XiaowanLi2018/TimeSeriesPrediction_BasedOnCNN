@@ -86,17 +86,17 @@
 
 **具体脚本功用**
 
-1. 数据预处理
-trainer.py 数据读入以及数据集划分
-util.py 基本数据处理
-2. 训练
-train.py
-运行：python3 train.py
-3. 预测
-predict.py
-运行： python3 predict.py
-4. 模型
-my_models.py
+1. 数据预处理<br>
+trainer.py 数据读入以及数据集划分<br>
+util.py 基本数据处理<br>
+2. 训练<br>
+train.py<br>
+运行：python3 train.py<br>
+3. 预测<br>
+predict.py<br>
+运行： python3 predict.py<br>
+4. 模型<br>
+my_models.py<br>
 
 参考文献：
 --
