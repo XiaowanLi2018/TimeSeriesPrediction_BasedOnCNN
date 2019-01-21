@@ -53,6 +53,7 @@
 <br>
 2.为了提高准确率，还加入了残差卷积的跳层连接，以及1×1的卷积(TCN)
 ![](https://github.com/XiaowanLi2018/TimeSeriesPrediction_BasedOnCNN/blob/master/data/Screenshot-from-2018-06-09-162900.png)
+<br>
 3.为了扩大感受野，帮助模型更好的学习特征，可以堆叠res_block+孔洞卷积（对于现有的dataset，暂时不需要堆叠来提升学习效果，网络过于庞大）<br>
 ![](https://github.com/XiaowanLi2018/TimeSeriesPrediction_BasedOnCNN/blob/master/data/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-01-21%20%E4%B8%8B%E5%8D%882.27.02.png)<br>
 
@@ -60,8 +61,8 @@
 --
 <br>
 随机选择验证集中的2000条时间序列测试结果，验证集的mape基本在5%-11%范围内，其中一次的具体结果：<br>
-![](https://github.com/XiaowanLi2018/TimeSeriesPrediction_BasedOnCNN/blob/master/data/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-01-21%20%E4%B8%8B%E5%8D%882.31.52.png)<br>
-![](https://github.com/XiaowanLi2018/TimeSeriesPrediction_BasedOnCNN/blob/master/data/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-01-21%20%E4%B8%8B%E5%8D%882.33.19.png)
+![img](https://github.com/XiaowanLi2018/TimeSeriesPrediction_BasedOnCNN/blob/master/data/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-01-21%20%E4%B8%8B%E5%8D%882.31.52.png)<br>
+![img](https://github.com/XiaowanLi2018/TimeSeriesPrediction_BasedOnCNN/blob/master/data/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-01-21%20%E4%B8%8B%E5%8D%882.33.19.png)
 
 使用方法以及说明：
 --
