@@ -42,6 +42,13 @@
 | input                                     | output                     |
 | ----------------------------------------- | -------------------------- |
 | (batch_size,encode_length,feature_length) | (batch_size,pred_length,1) |
+- 模型输入
+
+| name            | shape                                 | describe                                                    |
+| --------------- | :------------------------------------ | ----------------------------------------------------------- |
+| inputs          | (batch_size, encoder_len,feature_num) | encoder_len 长的序列，每个时间点包含当前时间点的值和相关特征 |
+| outputs         | (batch_size, decoder_len,1)           | decoder_len 长的序列，每个时间点包含当前时间点的值           |
+
 
 算法网络：
 --
