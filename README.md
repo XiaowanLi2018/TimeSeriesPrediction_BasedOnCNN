@@ -20,6 +20,10 @@
 扩展卷积是在普通卷机的基础上引入一个新的 hyper-parameter, dilate（扩张系数）, 这个 hyper-parameter 的涵义是每隔 dilate-1 个像素取一个” 像素”, 做卷积操作，扩张卷积可以做到每一层隐层都和输入序列大小一样，并且计算量降低，感受野足够大<br>
 ![](https://github.com/XiaowanLi2018/TimeSeriesPrediction_BasedOnCNN/blob/master/data/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-01-21%20%E4%B8%8A%E5%8D%8810.10.31.png)
 <br>
+3.卷积运算<br>
+![](https://github.com/XiaowanLi2018/TimeSeriesPrediction_BasedOnCNN/blob/master/data/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-01-21%20%E4%B8%8B%E5%8D%884.01.39.png)
+![](https://github.com/XiaowanLi2018/TimeSeriesPrediction_BasedOnCNN/blob/master/data/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-01-21%20%E4%B8%8B%E5%8D%884.01.26.png)<br>
+其中 d 为扩张系数、k 为卷积核大小，s − d · i 计算了采用上层哪一个单元。扩张系数控制了每两个卷积核间会插入多少零值，当 d=1 时，空洞卷积就会退化为一般的卷积运算。使用较大的扩张系数允许输出端的神经元表征更大范围的输入序列，因此能有效扩张感受野
 
 算法设计：
 -
