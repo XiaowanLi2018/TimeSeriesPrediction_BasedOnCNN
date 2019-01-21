@@ -39,8 +39,7 @@
 ![](https://github.com/ZhouYuxuanYX/Wavenet-in-Keras-for-Kaggle-Competition-Web-Traffic-Time-Series-Forecasting/blob/master/figures/wavenet.gif)
 <br>
 2.为了提高准确率，还加入了残差卷积的跳层连接，以及1×1的卷积(TCN)
-
-
+![](https://github.com/XiaowanLi2018/TimeSeriesPrediction_BasedOnCNN/blob/master/data/Screenshot-from-2018-06-09-162900.png)
 
 模型效果：
 --
