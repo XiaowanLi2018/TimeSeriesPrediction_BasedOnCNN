@@ -41,7 +41,7 @@
 
 | input                                     | output                      | description           |
 | :---------------------------------------- | :-------------------------- | :-------------------- |
-| (batch_size,encode_length,feature_length) |(batch_size,pred_length,1)   |encode_length:时序数据编码长度，feature_length:和时间点对应的特征长度，pred_length:要预测的时间长度，batch_size:每个batch送入训练的时间序列的条目数,ps:此时input为编码长度和前一时间切片拼接后的array <br>
+| (batch_size,encode_length,feature_length) |(batch_size,pred_length,1)   |encode_length:时序数据编码长度，feature_length:和时间点对应的特征长度，pred_length:要预测的时间长度，batch_size:每个batch送入训练的时间序列的条目数<br>,ps:此时input为编码长度和前一时间切片拼接后的array <br>
 
 - 预测阶段
 
