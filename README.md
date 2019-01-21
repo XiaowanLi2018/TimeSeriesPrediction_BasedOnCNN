@@ -51,16 +51,16 @@
 1.base_wavenet模型仅使用最近的 k 个输入，即 x_t-k + 1，...，x_t 来预测 y_t，而不是依赖整个历史状态进行预测,这对应于强条件独立性假设。特别是，前馈模型假定目标仅取决于 k 个最近的输入<br>
 ![](https://github.com/ZhouYuxuanYX/Wavenet-in-Keras-for-Kaggle-Competition-Web-Traffic-Time-Series-Forecasting/blob/master/figures/wavenet.gif)
 <br>
-2.为了提高准确率，还加入了残差卷积的跳层连接，以及1×1的卷积(TCN)<br>
+2.为了提高准确率，还加入了残差卷积的跳层连接，以及1×1的卷积(TCN)
 ![](https://github.com/XiaowanLi2018/TimeSeriesPrediction_BasedOnCNN/blob/master/data/Screenshot-from-2018-06-09-162900.png)
 3.为了扩大感受野，帮助模型更好的学习特征，可以堆叠res_block+孔洞卷积（对于现有的dataset，暂时不需要堆叠来提升学习效果，网络过于庞大）<br>
-![](https://github.com/XiaowanLi2018/TimeSeriesPrediction_BasedOnCNN/blob/master/data/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-01-21%20%E4%B8%8B%E5%8D%882.27.02.png)
+![](https://github.com/XiaowanLi2018/TimeSeriesPrediction_BasedOnCNN/blob/master/data/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-01-21%20%E4%B8%8B%E5%8D%882.27.02.png)<br>
 
 模型效果：
 --
 <br>
-随机选择验证集中的2000条时间序列测试结果，验证集的mape基本在5%-11%范围内，其中一次的具体结果：
-![](https://github.com/XiaowanLi2018/TimeSeriesPrediction_BasedOnCNN/blob/master/data/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-01-21%20%E4%B8%8B%E5%8D%882.31.52.png)
+随机选择验证集中的2000条时间序列测试结果，验证集的mape基本在5%-11%范围内，其中一次的具体结果：<br>
+![](https://github.com/XiaowanLi2018/TimeSeriesPrediction_BasedOnCNN/blob/master/data/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-01-21%20%E4%B8%8B%E5%8D%882.31.52.png)<br>
 ![](https://github.com/XiaowanLi2018/TimeSeriesPrediction_BasedOnCNN/blob/master/data/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-01-21%20%E4%B8%8B%E5%8D%882.33.19.png)
 
 使用方法以及说明：
