@@ -96,6 +96,6 @@ my_models.py
 
 参考文献：
 --
-1.[CNN时序预测基础论文](https://arxiv.org/pdf/1803.01271.pdf）
-2.[Wavenet](https://github.com/ZhouYuxuanYX/Wavenet-in-Keras-for-Kaggle-Competition-Web-Traffic-Time-Series-Forecasting)
+1.[CNN时序预测基础论文](https://arxiv.org/pdf/1803.01271.pdf）<br>
+2.[Wavenet](https://github.com/ZhouYuxuanYX/Wavenet-in-Keras-for-Kaggle-Competition-Web-Traffic-Time-Series-Forecasting)<br>
 3.[TCN](https://github.com/philipperemy/keras-tcn)
