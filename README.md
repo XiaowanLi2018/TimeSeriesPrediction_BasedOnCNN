@@ -34,8 +34,8 @@
 -
 <br>
 训练阶段<br>
-|input|output|description|
-|---|:---|---|
+|input                                    |outputm                   |description         |
+|-----------------------------------------|--------------------------|--------------------|
 |(batch_size,encode_length,feature_length)|(batch_size,pred_length,1)|encode_length:时序数据编码长度，feature_length:和时间点对应的特征长度，pred_length:要预测的时间长度，batch_size:每个batch送入训练的时间序列的条目数|
 预测阶段
 <br>
