@@ -37,19 +37,13 @@
 
 | input                                     | output                      | description           |
 | :---------------------------------------- | :-------------------------- | :-------------------- |
-| (batch_size,encode_length,feature_length) |(batch_size,pred_length,1)   |encode_length:时序数据编码长度，feature_length:和时间点对应的特征长度，pred_length:要预测的时间长度，batch_size:每个batch送入训练的时间序列的条目数 <br>
+| (batch_size,encode_length,feature_length) |(batch_size,pred_length,1)   |encode_length:时序数据编码长度，feature_length:和时间点对应的特征长度，pred_length:要预测的时间长度，batch_size:每个batch送入训练的时间序列的条目数,ps:此时input为编码长度和前一时间切片拼接后的array <br>
 
 - 预测阶段
 
 | input                                     | output                      |
 | ----------------------------------------- | :-------------------------- |
 | (batch_size,encode_length,feature_length) | (batch_size,pred_length,1)  |
-- 模型输入
-
-| name            | shape                                 | describe                                                    |
-| --------------- | :------------------------------------ | ----------------------------------------------------------- |
-| inputs          | (batch_size, encoder_len,feature_num) | encoder_len 长的序列，每个时间点包含当前时间点的值和相关特征 |
-| outputs         | (batch_size, decoder_len,1)           | decoder_len 长的序列，每个时间点包含当前时间点的值           |
 
 
 算法网络：
@@ -59,18 +53,16 @@
 <br>
 2.为了提高准确率，还加入了残差卷积的跳层连接，以及1×1的卷积(TCN)<br>
 ![](https://github.com/XiaowanLi2018/TimeSeriesPrediction_BasedOnCNN/blob/master/data/Screenshot-from-2018-06-09-162900.png)
+3.为了扩大感受野，帮助模型更好的学习特征，可以堆叠res_block+孔洞卷积（对于现有的dataset，暂时不需要堆叠来提升学习效果，网络过于庞大）<br>
+![](https://github.com/XiaowanLi2018/TimeSeriesPrediction_BasedOnCNN/blob/master/data/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-01-21%20%E4%B8%8B%E5%8D%882.27.02.png)
 
 模型效果：
 --
 <br>
+随机选择验证集中的2000条时间序列测试结果，验证集的mape基本在5%-11%范围内，其中一次的具体结果：
+![](https://github.com/XiaowanLi2018/TimeSeriesPrediction_BasedOnCNN/blob/master/data/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-01-21%20%E4%B8%8B%E5%8D%882.31.52.png)
+![](https://github.com/XiaowanLi2018/TimeSeriesPrediction_BasedOnCNN/blob/master/data/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-01-21%20%E4%B8%8B%E5%8D%882.33.19.png)
+
 使用方法以及说明：
 --
 
-
-针对时序数据的预测，现在目前多数会采用以rnn为基础的模型来进行，
---
-     Wavenet
-Optimizations:
---
-     1. Change Net Structure (+LSTM/+Dropout) 
-     2. Add Residual Block and try to build structure like TCN
